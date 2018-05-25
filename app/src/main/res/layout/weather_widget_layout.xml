@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_map_panel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="@dimen/compass_widget_width"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <FrameLayout
+            android:id="@+id/compass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/compass_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_compass"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/compass_pointer_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pointer"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/weather_wind_direction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/compass"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_medium" />
+
+        <TextView
+            android:id="@+id/weather_wind_speed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/compass"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_medium" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/weather_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <include
+            android:id="@+id/forecast_cell_1"
+            layout="@layout/menu_widget_item_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/forecast_cell_2"
+            layout="@layout/widget_item_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/forecast_cell_3"
+            layout="@layout/widget_item_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="title">Main</string>
+    <string name="sun_rise">Subrise</string>
+    <string name="sun_set">Sunset</string>
+    <string name="dir_north">N</string>
+    <string name="dir_north_east">NE</string>
+    <string name="dir_east">E</string>
+    <string name="dir_south_east">SE</string>
+    <string name="dir_south">S</string>
+    <string name="dir_south_west">SW</string>
+    <string name="dir_west">W</string>
+    <string name="dir_north_west">NW</string>
+    <string name="dir_none">None</string>
+    <string name="dir_all">All</string>
+    <string name="forecast">Forecast</string>
+</resources>
